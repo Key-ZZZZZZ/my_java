@@ -11,12 +11,41 @@ public class Test18 {
         //生成双色球
         int[] a = createNumber();
 
+
+        System.out.println("=======================================");
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+
+
+        System.out.println("=======================================");
+
         //用户输入的号码
         int[] b = userInput();
 
-        for (int i= 0; i < a.length; i++) {
-            System.out.println(a[i]);
+//        判断用户中奖情况
+        int redCount = 0;
+
+        for (int i = 0; i < b.length-1; i++) {
+            int redNum = a[i];
+            for (int i1 = 0; i1 < a.length - 1; i1++) {
+                if( a[i1] == redNum ){
+                    redCount++;
+//                    跳出内循环，继续判断下一个红球号码
+                    break;
+                }
+            }
         }
+//        判断蓝球
+        int blueCount = 0;
+
+        int blueNum = b[b.length-1];
+        if(blueNum == a[a.length-1]){
+            blueCount++;
+        }
+        System.out.println(redCount);
+        System.out.println(blueCount);
+
 
 
     }
