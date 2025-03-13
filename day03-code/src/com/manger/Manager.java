@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Manager {
 
-    public static void main(String[] args) {
+    public static void start() {
         ArrayList<Student> list = new ArrayList<>();
 
        while (true){
